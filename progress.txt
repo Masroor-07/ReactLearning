@@ -1,0 +1,13 @@
+13th Sept, 2023
+====================================
+react-script
+vite
+project setup - template and boiler plate
+file structure
+useState - indepth, multiple ways to handle
+how react hanlde update state
+
+TODO
+=============
+useEffect
+components
