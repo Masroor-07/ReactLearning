@@ -7,7 +7,15 @@ file structure
 useState - indepth, multiple ways to handle
 how react hanlde update state
 
+15th September
+=======================
+Project - TODO App
+
+
+
 TODO
 =============
+Small Project - TODO App
+
 useEffect
 components

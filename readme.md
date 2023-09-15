@@ -15,8 +15,15 @@ browser - html, css and js understand
 jsx - webpack - build - jsx ko js me convert krta hai
 minify
 
-yarn create vite
+** To Create a new Project **
 npm create vite
+
+- choose React
+- choose javascript
+
+Run - npm install
+Run - npm run dev // look into package.json for the script name
+
 node package manger - libraries- packages - store room
 
 package.json

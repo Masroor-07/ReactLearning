@@ -1,49 +1,55 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+const App = () => {
+  const [todoList, setTodoList] = useState([]);
+  const [inputTodo, setInputTodo] = useState("");
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  const increementCount = () => {
-    setCount((prev) => prev + 1);
-    console.log("clicked", count);
+  const addTodo = () => {
+    setTodoList([...todoList, inputTodo]);
+    setInputTodo("");
   };
 
-  let counter = 10;
-
-  const increementCounter = () => {
-    console.log("counter is clicked");
-    counter = counter + 1;
-    console.log(counter);
+  const removeTodo = (index) => {
+    let newTodoList = todoList.filter((item, i) => i != index);
+    setTodoList(newTodoList);
   };
 
-  // logic of the function
+  const handleInput = (event) => {
+    let value = event.target.value;
+    setInputTodo(value);
+  };
+
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <h1 className="app_name">TODO App</h1>
+      {/* input box */}
+      <input
+        type="text"
+        name="todo_input"
+        value={inputTodo}
+        onChange={handleInput}
+        className="input-1"
+      />
+      <div className="btn_container">
+        <button className="save_btn" onClick={addTodo}>
+          Save
+        </button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={increementCount}>count is {count}</button>
-        <button onClick={increementCounter}>Counter value is {counter} </button>
 
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="todo_list">
+        <ul>
+          {todoList.map((item, index) => {
+            return (
+              <li key={index}>
+                <span>{item}</span>
+                <button onClick={() => removeTodo(index)}>Remove</button>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   );
-}
+};
 
 export default App;
