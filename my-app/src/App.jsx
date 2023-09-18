@@ -1,53 +1,51 @@
-import { useState } from "react";
-import "./App.css";
-const App = () => {
-  const [todoList, setTodoList] = useState([]);
-  const [inputTodo, setInputTodo] = useState("");
+import "./app.css";
 
-  const addTodo = () => {
-    setTodoList([...todoList, inputTodo]);
-    setInputTodo("");
-  };
-
-  const removeTodo = (index) => {
-    let newTodoList = todoList.filter((item, i) => i != index);
-    setTodoList(newTodoList);
-  };
-
-  const handleInput = (event) => {
-    let value = event.target.value;
-    setInputTodo(value);
-  };
-
+const Image = ({ color }) => {
   return (
-    <div className="container">
-      <h1 className="app_name">TODO App</h1>
-      {/* input box */}
-      <input
-        type="text"
-        name="todo_input"
-        value={inputTodo}
-        onChange={handleInput}
-        className="input-1"
-      />
-      <div className="btn_container">
-        <button className="save_btn" onClick={addTodo}>
-          Save
-        </button>
-      </div>
+    <div
+      className="img"
+      style={{
+        backgroundColor: color || "red",
+      }}
+    ></div>
+  );
+};
 
-      <div className="todo_list">
-        <ul>
-          {todoList.map((item, index) => {
-            return (
-              <li key={index}>
-                <span>{item}</span>
-                <button onClick={() => removeTodo(index)}>Remove</button>
-              </li>
-            );
-          })}
-        </ul>
+const Card = ({ title, price, color }) => {
+  return (
+    <>
+      <div className="card">
+        <Image color={color} />
+        <div className="content">
+          <div className="title">{title || "Title"}</div>
+          <div className="price">{price || 200}</div>
+        </div>
       </div>
+    </>
+  );
+};
+
+const App = () => {
+  const data = [
+    { title: "title 1", price: "2000", color: "red" },
+    { title: "title 2", price: "2200", color: "black" },
+    { title: "title 3", price: "200", color: "pink" },
+    { title: "title 4", price: "600", color: "blue" },
+    { title: "title 5", price: "500", color: "purple" },
+    { title: "title 6", price: "300", color: "green" },
+    { title: "title 7", price: "2800", color: "indigo" },
+    { title: "title 8", price: "800", color: "violet" },
+  ];
+  return (
+    <div className="cards">
+      {data.map((item, index) => (
+        <Card
+          key={index}
+          title={item.title}
+          price={item.price}
+          color={item.color}
+        />
+      ))}
     </div>
   );
 };
