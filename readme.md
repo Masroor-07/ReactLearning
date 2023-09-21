@@ -30,3 +30,28 @@ package.json
 
 package-lock.json - sare packages - depth details - version - dependencies
 yarn.lock
+
+# Storage
+
+client side
+Localstorage - key-value:string - data is persisted even after the tab is closed
+window - global object
+window.localStorage.setItem('key', 'value')
+window.localStorage.getItem('key')
+
+Session storage - key-value:string - stores data - untill tab is closed (or for a certain time period)
+window.sessionStorage.setItem('key', 'value')
+window.sessionStorage.getItem('key')
+
+server concept - basic
+Cookies - key-value:string - small space - stored by server
+
+Advanced - basic
+cache storage - Api response, image , file store
+IndexDb - Database browser
+
+# PATH
+
+Devtool -> Application
+-> Local storage
+-> Session storage

@@ -12,9 +12,11 @@ const Image = ({ color }) => {
 };
 
 const Card = ({ title, price, color }) => {
+  // prop
   return (
     <>
       <div className="card">
+        {/*  child Component */}
         <Image color={color} />
         <div className="content">
           <div className="title">{title || "Title"}</div>
@@ -40,7 +42,7 @@ const App = () => {
     <div className="cards">
       {data.map((item, index) => (
         <Card
-          key={index}
+          key={index} // unique
           title={item.title}
           price={item.price}
           color={item.color}

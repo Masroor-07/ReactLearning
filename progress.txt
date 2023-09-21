@@ -14,10 +14,14 @@ Project - TODO App
 18th September
 =======================
 components
+
+21 September
+================
 UseEffect
+form handling
+Storage - local and session (indetail)
+Enahnced TODO App
 
 TODO
 =============
-Small Project - TODO App
-
-useEffect
+API fetchinhg 
