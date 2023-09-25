@@ -65,7 +65,13 @@ const TodoApp = () => {
             todoList.map((item, index) => {
               return (
                 <li key={index}>
-                  <span>{item}</span>
+                  <span
+                    style={{
+                      color: index % 2 == 0 ? "red" : "black",
+                    }}
+                  >
+                    {item}
+                  </span>
                   <button onClick={() => removeTodo(index)}>Remove</button>
                 </li>
               );

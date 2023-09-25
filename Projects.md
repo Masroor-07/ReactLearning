@@ -16,3 +16,8 @@
 - button - increement - label "+" - increase the value by 1
 - button - decreement - label "-" - decrease the value by 1
 - button - Reset - counter to 0
+
+# Project 3 - Task Management System
+
+- Show list of task and their status
+- Create a task

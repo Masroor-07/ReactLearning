@@ -22,6 +22,18 @@ form handling
 Storage - local and session (indetail)
 Enahnced TODO App
 
+25 September
+================
+Conditional Rendering 
+form handling
+Auth Setup - simple version
+parent child - passing prop and funtions
+how to handle parent's state
+
 TODO
 =============
 API fetchinhg 
+
+
+Test - 22 sept 
+Counter App - 22 sept
