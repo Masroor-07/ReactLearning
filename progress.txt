@@ -32,7 +32,9 @@ how to handle parent's state
 
 TODO
 =============
-API fetchinhg 
+API fetching 
+Route - path
+Routing  - path define 
 
 
 Test - 22 sept 
