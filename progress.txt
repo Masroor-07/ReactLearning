@@ -30,11 +30,14 @@ Auth Setup - simple version
 parent child - passing prop and funtions
 how to handle parent's state
 
+Oct 4
+===========
+React-router dom
+REST API 
+
 TODO
 =============
-API fetching 
-Route - path
-Routing  - path define 
+API fetching in out app usiong js 
 
 
 Test - 22 sept 
